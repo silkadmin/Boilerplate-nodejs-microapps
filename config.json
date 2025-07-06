@@ -1,0 +1,77 @@
+{
+    "debug": true,
+    "remoteDebug": true,
+    "audit": false,
+    "log_requests": false,
+    "log_sql": false,
+    "intercept_axios_request": false,
+    "intercept_axios_response": false,
+    "default_lang": "en-gb",
+    "noauth":
+    [
+        "/auth",
+        "/auth/register",
+        "/auth/forgotpwd",
+        "/auth/resetpwd",
+        "/ping",
+        "/test",
+        "/"
+    ],
+    "IPWHITELISTING":
+    {
+        "/test":
+        [
+            "*"
+        ]
+    },
+    "AUTHJWT":
+    {
+        "secret": "Zv7QFrJWhSz6j2kA",
+        "expires": 3600
+    },
+    "mail":
+    {
+        "host": "email-smtp.us-east-1.amazonaws.com",
+        "port": 587,
+        "secure": false,
+        "auth":
+        {
+            "user": "smtp-userid",
+            "pass": "smtp-pwd"
+        },
+        "default_from": "noreply@smartinfologiks.com"
+    },
+    "STORAGE":
+    {
+        "type": "S3",
+        "bucket": "test1"
+    },
+    "dbmongo":
+    {
+        "enable": false,
+        "uri": "mongodb://127.0.0.1:27017/silkapi"
+    },
+    "dbmysql":
+    {
+        "enable": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "test",
+        "password": "test",
+        "database": "testdb",
+        "insecureAuth": true
+    },
+    "cache":
+    {
+        "enable": false,
+        "host": "127.0.0.1",
+        "port": 6379,
+        "family": 4,
+        "db": 0
+    },
+    "queue":
+    {
+        "enable": false,
+        "host": "amqp://rabbit01:rabbit01@127.0.0.1:5672"
+    }
+}
